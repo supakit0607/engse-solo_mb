@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/user_models.dart';
+import '../models/product_model.dart';
 
 class UserApiService {
   static const String _baseUrl = 'https://fakestoreapi.com/users';
@@ -53,5 +54,14 @@ class UserApiService {
     final res = await http.delete(Uri.parse('$_baseUrl/$id'));
     if (res.statusCode == 200) return;
     throw Exception('Failed to delete user ($id) (${res.statusCode})');
+  }
+
+  Future<List<ProductModel>> fetchProducts() async {
+    final res = await http.get(Uri.parse('https://fakestoreapi.com/products'));
+    if (res.statusCode == 200) {
+      final List data = jsonDecode(res.body);
+      return data.map((e) => ProductModel.fromJson(e)).toList();
+    }
+    throw Exception('Failed to load products');
   }
 }
