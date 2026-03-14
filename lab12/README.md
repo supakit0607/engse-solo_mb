@@ -63,9 +63,8 @@ lib ── models ── waste_point.dart
 └── main.dart
 
 ▶️ รูปแอปพลิเคชัน
-(<Screenshot 2026-03-14 192008.png>)
-(<Screenshot 2026-03-14 192023.png>)
-(<Screenshot 2026-03-14 192849.png>)
-
-👨‍💻 ผู้พัฒนา
+![alt text](<Screenshot 2026-03-14 192008.png>)
+![alt text](<Screenshot 2026-03-14 192023.png>)
+![alt text](<Screenshot 2026-03-14 192849.png>)
+👨‍💻 ผู้พัฒนา 
 Supakit Rakboot สำหรับการเรียนรายวิชา Mobile Application Development
